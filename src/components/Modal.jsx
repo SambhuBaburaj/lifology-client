@@ -8,9 +8,15 @@ export default function Modal({ setModalOpen, timeUpdate, userDetails }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.5 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none"
+      className="fixed  inset-0 z-50 flex top-24 justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none"
     >
-      <div className="relative w-auto max-w-lg mx-auto my-6">
+      {/* Semi-transparent overlay */}
+      <div
+        className="fixed inset-0 bg-black opacity-70 backdrop-blur-3xl z-40"
+        onClick={() => setModalOpen(false)} // Close modal when clicking outside
+      ></div>
+      {/* Modal content */}
+      <div className="relative w-auto max-w-lg mx-auto my-6 z-50">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
