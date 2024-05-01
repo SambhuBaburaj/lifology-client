@@ -17,7 +17,7 @@ const LoginIn = () => {
     setloading(true);
     googleAuthApi(credentials)
       .then(({ data }) => {
-        console.log(data);
+
 
         localStorage.setItem("Userdata", data.AccessToken);
         navigate("/");
