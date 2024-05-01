@@ -117,7 +117,7 @@ console.log(location.state);
                   <span class="sr-only">Loading...</span>
                 </div>
               ) : (
-                <GoogleOAuthProvider clientId="297430789385-crn1f3e9mib7ho92vk4udvtf8i107cjd.apps.googleusercontent.com">
+                <GoogleOAuthProvider clientId="1018155745441-hc508b51ri5dg2ir55sidj0ep5sdcdfg.apps.googleusercontent.com">
                 <GoogleLogin
                   onSuccess={(credentialResponse) => {
                     GoogleAuth(credentialResponse);
